@@ -12,7 +12,7 @@ last_names = ['Depay', 'Dembélé', 'Traoré', 'Aouar', 'Tousart', 'Mendes', 'Ko
 10.times do |i|
   first_name = first_names[i]
   last_name = last_names[i]
-  description = "#{first_name} #{last_name} is very nice"
+  description = "#{first_name} #{last_name} is very nice , bienvenue "
   email = "#{I18n.transliterate(first_name).downcase}.#{I18n.transliterate(last_name).downcase}@yopmail.com"
-  User.create(first_name: first_name, last_name: last_name, description: description, email: email, start_date: Date.today)
+  User.create(first_name: first_name, last_name: last_name, description: description, email: email, start_date: Date.today, duration: 60)
 end
