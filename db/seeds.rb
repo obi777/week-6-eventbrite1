@@ -14,5 +14,5 @@ last_names = ['Depay', 'Dembélé', 'Traoré', 'Aouar', 'Tousart', 'Mendes', 'Ko
   last_name = last_names[i]
   description = "#{first_name} #{last_name} is very nice , bienvenue "
   email = "#{I18n.transliterate(first_name).downcase}.#{I18n.transliterate(last_name).downcase}@yopmail.com"
-  User.create(first_name: first_name, last_name: last_name, description: description, email: email, start_date: Date.today, duration: 60)
+  User.create(first_name: first_name, last_name: last_name, description: description, email: email)
 end
