@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   has_many :attendances
   has_many :participants, class_name: 'User', through: :attendances
 
-  validates :start_date, presence: true, start_date: true
+  validates :start_date, presence: true, inclusion: {in:(Date.today..Date.today + 50.years)}
   validates :duration, presence: true, duration: true
   validates :title, presence: true, length: { in: 5..140 }
   validates :description, presence: true, length: { in: 20..1000 }
